@@ -1,0 +1,26 @@
+sudo: false
+
+language: c
+addons:
+  apt:
+    packages:
+      - rake
+      - psmisc
+      - bison
+      - git
+      - gperf
+compiler:
+  - clang
+  - gcc
+
+branches:
+  only:
+    - master
+    - 0.6.x-dev
+    - 0.7.x-dev
+cache:
+  directories:
+    - mruby
+
+script:
+  - rake
